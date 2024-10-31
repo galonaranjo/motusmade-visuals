@@ -1,2 +1,29 @@
 node_modules
 
+# Build output
+dist/
+.output
+build/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE/Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+.env.*
+
+# Fly.io
+.fly/
+

@@ -14,6 +14,7 @@ let visuals = [
   { id: "10", url: "/images/010.jpg" },
   { id: "11", url: "/images/011.jpg" },
   { id: "12", url: "/images/012.jpg" },
+  { id: "13", url: "/images/013.jpg" },
 ];
 
 app.set("view engine", "ejs");
@@ -30,6 +31,7 @@ app.get("/", (request, response) => {
   response.render("index.ejs", { imageUrl: randomVisual.url });
 });
 
-const PORT = 3000;
-app.listen(PORT);
-console.log(`Server is running on port ${PORT}.`);
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`Server running on port ${PORT}`);
+});
